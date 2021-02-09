@@ -1,2 +1,0 @@
-- name: Infracost
-  uses: infracost/infracost-gh-action@v0.4.3
