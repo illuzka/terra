@@ -20,7 +20,7 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@v2
     - name: Run infracost diff
-      uses: infracost/infracost-gh-action@master # Use a specific version instead of master if locking is preferred
+      uses: infracost/infracost-gh-action@sd # Use a specific version instead of master if locking is preferred
       env:
         INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Do not change
@@ -29,5 +29,5 @@ jobs:
         # See the cloud credentials section for the options
       with:
         entrypoint: /scripts/ci/diff.sh # Do not change
-        terraform_dir: ./
+        terraform_dir: newdir/superdir
 #         terraform_plan_flags: -var-file=myvars.tfvars
