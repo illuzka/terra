@@ -9,18 +9,14 @@ on:
     - '**.tfvars'
     - '**.tfvars.json'
 jobs:
-  newcommand:
-    runs-on: ubuntu-latest
-    name: show ls la
-    steps:
-      - id: asd
-        run: "ls -la"
-      - id: step2
-        run: "pwd"
   infracost:
     runs-on: ubuntu-latest
     name: Show infracost diff
     steps:
+    - name: check ls la 
+      run: "ls -la"
+    - name: check pwd
+      run: "pwd"      
     - name: Check out repository
       uses: actions/checkout@v2
     - name: Run infracost diff
