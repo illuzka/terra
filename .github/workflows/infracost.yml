@@ -8,6 +8,7 @@ on:
     - '**.tf'
     - '**.tfvars'
     - '**.tfvars.json'
+    - 'newdir/superdir/**.tf'
 jobs:
   infracost:
     runs-on: ubuntu-latest
