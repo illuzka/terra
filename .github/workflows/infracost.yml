@@ -19,6 +19,8 @@ jobs:
       run: "ls -la"
     - name: check pwd
       run: "pwd"   
+    - name: cd newdir
+      run: "cd newdir/superdir" 
     - name: Run infracost diff
       uses: infracost/infracost-gh-action@master # Use a specific version instead of master if locking is preferred
       env:
@@ -29,5 +31,5 @@ jobs:
         # See the cloud credentials section for the options
       with:
         entrypoint: /scripts/ci/diff.sh # Do not change
-        terraform_dir: newdir/superdir/
+        terraform_dir: ./
 #         terraform_plan_flags: -var-file=myvars.tfvars
