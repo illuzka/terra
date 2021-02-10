@@ -11,6 +11,10 @@ on:
 jobs:
   infracost:
     runs-on: ubuntu-latest
+    name: show ls la
+    run: echo "ls -la"
+    name: show pwd
+    run: echo "pwd"
     name: Show infracost diff
     steps:
     - name: Check out repository
