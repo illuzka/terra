@@ -29,5 +29,5 @@ jobs:
         # See the cloud credentials section for the options
       with:
         entrypoint: /scripts/ci/diff.sh # Do not change
-        terraform_dir: ./newdir/superdir/
+        terraform_dir: newdir/superdir/
 #         terraform_plan_flags: -var-file=myvars.tfvars
