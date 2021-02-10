@@ -4,5 +4,5 @@ provider "aws" {
 
 resource "aws_instance" "asd" {
   ami = "ami-0a91cd140a1fc148a"
-  instance_type = "t2.large"
+  instance_type = "t2.nano"
 }
